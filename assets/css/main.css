@@ -909,6 +909,20 @@ a.back-to-top i:hover, a.back-to-top i:focus {
 .slicknav_menu {
   display: none;
 }
+.btn-whatsapp {
+  display:block;
+  width:70px;
+  height:70px;
+  color: #fff;
+  position: fixed;
+  left:20px;
+  bottom:20px;
+  border-radius:10%;
+  line-height:80px;
+  text-align:center;
+  z-index:999;
+  box-shadow: #000;
+}
 
 @media screen and (max-width: 768px) {
   .navbar-header {
@@ -1494,6 +1508,7 @@ a.back-to-top i:hover, a.back-to-top i:focus {
   -o-transform: grayscale(0); 
   -webkit-transition:-webkit-filter 2s; 
   transition:-webkit-filter 2s; 
+  -moz-transition:-webkit-filter 2s; 
   -o-transition:filter 2s; 
   transition:filter 2s; 
   transition:filter 2s, -webkit-filter 2s;

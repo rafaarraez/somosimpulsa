@@ -1,3 +1,7 @@
+<?php
+session_start();
+require 'requirelanguage.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,7 +19,7 @@
     <meta property="og:image" content="src/Favicon/apple-icon-114x114.png" />
     <meta property="og:description" content="Así lo planteaba el reconocido PhD José Cordeiro, Presidente de la Sociedad Mundial del Futuro – Filial Venezuela y docente de la Singularity University, quien durante sus presentaciones en la ciudad de Valencia no se refería a cualquier ratón, sino a..." />
 
-    <title>Blog - Illustration in modern days advertising</title>
+    <title>Blog - <?php echo $blogdosTitulo; ?></title>
     <link rel="apple-touch-icon" sizes="57x57" href="src/Favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="src/Favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="src/Favicon/apple-icon-72x72.png">
@@ -78,14 +82,14 @@
                     <span class="icon-menu"></span>
                     <span class="icon-menu"></span>
                 </button>
-                <a href="#" class="navbar-brand logopeque"><img src="src/iconos/impulsapeque.png" style="margin-bottom: 0;" alt=""></a>
+                <a href="index.php#blog" class="navbar-brand logopeque"><img src="src/iconos/impulsapeque.png" style="margin-bottom: 0;" alt=""></a>
                 </div>
                 
                 <div class="collapse navbar-collapse" id="main-navbar">
                 <ul class="navbar-nav mr-auto w-100 justify-content-end">
-                    <a class="nav-link" href="index.html#blog">
+                    <a class="nav-link" href="index.php#blog">
 						<i class="fas fa-long-arrow-alt-left"></i>  
-                      Volver al inicio
+                      <?php echo $volverhome; ?>
                     </a>
                     </li>
                 
@@ -96,7 +100,7 @@
             <!-- Mobile Menu Start -->
 			<ul class="mobile-menu">
 				<li>
-				  <a class="page-scrool" href="index.html#blog"> <i class="fas fa-long-arrow-alt-left"></i>Voler al inicio</a>
+				  <a class="page-scrool" href="index.php#blog"> <i class="fas fa-long-arrow-alt-left"></i> <?php echo $volverhome; ?></a>
 				</li>
 			</ul>
             <!-- Mobile Menu End -->
@@ -111,7 +115,7 @@
 							<div class="post-meta">
 								<span class="post-date">Impulsa Talks by CRISTINA LÓPEZ</span>
 							</div>
-							<h1>Illustration in modern days advertising </h1>
+							<h1><?php echo $blogdosTitulo; ?></h1>
 						</div>
 					</div>
 				</div>
@@ -129,20 +133,11 @@
 					<div class="col-md-12">
 						<div class="section-row sticky-container text">
 							<div class="main-post">
-                                <h3>Illustration in modern days advertising </h3>
+                                <h3><?php echo $blogdosTitulo; ?></h3>
                                 <div class="videoWrapper">
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/hibq-B-KjnU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                                 </div>
-                                <p>First things first… Do you know what an illustration is? Illustration is one of the most important forms of visual communication: it informs and observes, delights and decorates, instructs and inspires. Basically, an illustration is any visual representation of an idea or a concept. It can be done in any medium and it’s usually accompanied by text.</p>
-								<p>This form of expression has evolved through the centuries, and now we’ve got a lot of types of illustrations. Today’s artists create an astonishing variety of illustrations across a spectrum of styles and genres. From the first drawings man made in a cave, illustration has played a fundamental role both in telling stories and in sharing information and it is as relevant as ever in helping us understand our modern world. </p>
-								<p>In nowadays, visual marketing is becoming more important because it offers rich storytelling and people process and remember visuals better than words. In fact, infographics is one of the most used version of storytelling in illustration.</p>
-								<p>Illustration is eye catching for the customers, so the professionals take advantage of that attention, and they blend the product they want to sell with the illustration.</p> 
-								<p>Some advantages of illustrations are: </p> 
-                                <p>1. They create awareness to the audience. They are made to attract a certain target. </p> 
-                                <p>2. They give power to the text used. Because it is important to understand what they are selling us. </p>
-								<p>3. They help in response. A good advertising is supposed to trigger a great response from the audience. </p>	  
-									  <br>
-									  <h6>Thanks to social media young illustrators get more exposure. You can follow and support our artist Cristina López on her social media accounts @cristinamlt </h6>
+                                <?php echo $blogdosContenido; ?>
 							</div>
 
 						</div>
@@ -161,83 +156,7 @@
 		</div>
 		<!-- /section -->
         <!-- Footer Section Start -->
-        <footer class="footer-distributed">
-
-            <div class="footer-left">
-        
-                <img src="src/iconos/impulsa.png" alt="" srcset="">
-        
-                <p class="footer-links">
-                <a href="#">Home</a>
-                ·
-                <a href="#about">Impulsores</a>
-                ·
-                <a href="#quehacemos">¿Que Hacemos?</a>
-                ·
-                <a href="#proyectos">Proyectos</a>
-                ·
-                <a href="#blog">Blog</a>
-                ·
-                <a href="#ontactanos">Contactanos</a>
-                </p>
-        
-                <p class="footer-company-name">Impulsa Creativos &copy; 2018</p>
-            </div>
-        
-            <div class="footer-center">
-                
-                <div>
-                <i class="fab fa-whatsapp"></i>
-                <p>+584144152885</p>
-                </div>
-        
-                <div>
-                <i class="far fa-envelope"></i>
-                <p><a href="mailto:admin@somosimpulsa.com">admin@somosimpulsa.com</a></p>
-                </div>
-        
-            </div>
-        
-            <div class="footer-right">
-        
-                <p class="footer-company-about">
-                <span>Impulsa Creativos</span>
-                Siguenos en nuestras redes para estar al tanto
-                </p>
-        
-                <div class="footer-icons">
-                <a href="https://www.facebook.com/Impulsa-Creative-587675111575665/"  onclick="window.open(this.href); return false;"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/impulsave/?hl=es-la" onclick="window.open(this.href); return false;"><i class="fab fa-instagram"></i></a>
-                <a href="#" onclick="window.open(this.href); return false;"><i class="fab fa-twitter"></i></a>
-                <a href="#" onclick="window.open(this.href); return false;"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.youtube.com/channel/UC7ezy64_YdnfEvrGCWXEVYw" onclick="window.open(this.href); return false;"><i class="fab fa-youtube"></i></a>
-                </div>
-        
-            </div>
-        
-        </footer>
-
-        <!-- Ir Arriba -->
-        <a href="#" class="back-to-top">
-            <i class="fas fa-chevron-circle-up"></i>
-        </a>
-
-        <div id="preloader">
-            <div class="sk-circle">
-                <div class="sk-circle1 sk-child"></div>
-                <div class="sk-circle2 sk-child"></div>
-                <div class="sk-circle3 sk-child"></div>
-                <div class="sk-circle4 sk-child"></div>
-                <div class="sk-circle5 sk-child"></div>
-                <div class="sk-circle6 sk-child"></div>
-                <div class="sk-circle7 sk-child"></div>
-                <div class="sk-circle8 sk-child"></div>
-                <div class="sk-circle9 sk-child"></div>
-                <div class="sk-circle10 sk-child"></div>
-                <div class="sk-circle11 sk-child"></div>
-                <div class="sk-circle12 sk-child"></div>
-            </div>
-        </div>
+        <?php require ('Common/footer.php'); ?>
 
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="assets/js/preview.js"></script>

@@ -1,3 +1,8 @@
+
+<?php
+session_start();
+require 'requirelanguage.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,7 +20,7 @@
     <meta property="og:image" content="src/Favicon/apple-icon-114x114.png" />
     <meta property="og:description" content="Así lo planteaba el reconocido PhD José Cordeiro, Presidente de la Sociedad Mundial del Futuro – Filial Venezuela y docente de la Singularity University, quien durante sus presentaciones en la ciudad de Valencia no se refería a cualquier ratón, sino a..." />
 
-    <title>Blog - Impulsa Creativos implementa un programa de inmersión laboral para jóvenes</title>
+    <title><?php echo $blogIsabelTitulo; ?></title>
     <link rel="apple-touch-icon" sizes="57x57" href="src/Favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="src/Favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="src/Favicon/apple-icon-72x72.png">
@@ -78,14 +83,14 @@
                     <span class="icon-menu"></span>
                     <span class="icon-menu"></span>
                 </button>
-                <a href="#" class="navbar-brand logopeque"><img src="src/iconos/impulsapeque.png" style="margin-bottom: 0;" alt=""></a>
+                <a href="index.php#blog" class="navbar-brand logopeque"><img src="src/iconos/impulsapeque.png" style="margin-bottom: 0;" alt=""></a>
                 </div>
                 
                 <div class="collapse navbar-collapse" id="main-navbar">
                 <ul class="navbar-nav mr-auto w-100 justify-content-end">
-                    <a class="nav-link" href="index.html#blog">
+                    <a class="nav-link" href="index.php#blog">
 						<i class="fas fa-long-arrow-alt-left"></i>  
-                      Volver al inicio
+                      <?php echo $volverhome; ?>
                     </a>
                     </li>
                 
@@ -96,7 +101,7 @@
             <!-- Mobile Menu Start -->
 			<ul class="mobile-menu">
 				<li>
-				  <a class="page-scrool" href="index.html#blog"> <i class="fas fa-long-arrow-alt-left"></i>Voler al inicio</a>
+				  <a class="page-scrool" href="index.php#blog"> <i class="fas fa-long-arrow-alt-left"></i><?php echo $volverhome; ?></a>
 				</li>
 			</ul>
             <!-- Mobile Menu End -->
@@ -104,14 +109,14 @@
             <!-- Navbar End -->
 
             <div id="post-header" class="page-header">
-				<div class="background-img" style="background-image: url('./src/Blog/bannered.png');"></div>
+				<div class="background-img" style="background-image: url('./src/Blog/tiempo.png');"></div>
 				<div class="container">
 					<div class="row">
 						<div class="col-md-10">
 							<div class="post-meta">
 								<span class="post-date">Impulsa Talks</span>
 							</div>
-							<h1>Impulsa creativos implementa un programa de inmersión laboral para jóvenes </h1>
+							<h1><?php echo $blogIsabelTitulo; ?> </h1>
 						</div>
 					</div>
 				</div>
@@ -129,14 +134,12 @@
 					<div class="col-md-12">
 						<div class="section-row sticky-container text">
 							<div class="main-post">
-                                <h3>Impulsa creativos implementa un programa de inmersión laboral para jóvenes</h3>
+                                <h3><?php echo $blogIsabelTitulo; ?></h3>
                                 <div class="videoWrapper">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/voETTyEH0Hs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JSIkOwK6U5k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
-                                <p>Desde sus inicios, impulsa es una empresa que se ha caracterizado por la captación de talentos emergentes en distintas profesiones y brindar oportunidades de desarrollo profesional a jóvenes con poca o ninguna experiencia laboral previa; con la intención de propiciarles conocimiento y formación en áreas relacionadas al marketing, economía, medios digitales, programación web y audiovisuales. Es así como nace este programa de inmersión laboral para jóvenes, que ha tenido una receptividad importante para sus aspirantes.  </p>
-                                <p>El joven de 16 años de edad, Edgardo Montoya, fue el primer becado de este programa que ya ha generado una respuesta positiva en la comunidad. Edgardo estuvo compartiendo con todo el equipo de la compañía, durante 30 días seguidos, recibiendo remuneración y conocimientos básicos que posteriormente le sirvieron de puente para figurar dentro del equipo oficial de impulsa creativos.</p>
-                                <p>“Todos tenemos una experiencia que marca un antes y un después en nuestra vida”, expresó Tulio Dávila, CEO de la agencia, durante una reunión con su equipo. De eso se trata este programa. La idea es continuar sembrando nuevas experiencias en la mente y corazón de jóvenes que tengan la disposición de crecer en el ámbito profesional desde temprana edad. </p>
-							</div>
+                                <?php echo $blogIsabelContenido; ?>
+                            </div>
 
 						</div>
 
@@ -154,83 +157,7 @@
 		</div>
 		<!-- /section -->
         <!-- Footer Section Start -->
-        <footer class="footer-distributed">
-
-            <div class="footer-left">
-        
-                <img src="src/iconos/impulsa.png" alt="" srcset="">
-        
-                <p class="footer-links">
-                <a href="#">Home</a>
-                ·
-                <a href="#about">Impulsores</a>
-                ·
-                <a href="#quehacemos">¿Que Hacemos?</a>
-                ·
-                <a href="#proyectos">Proyectos</a>
-                ·
-                <a href="#blog">Blog</a>
-                ·
-                <a href="#ontactanos">Contactanos</a>
-                </p>
-        
-                <p class="footer-company-name">Impulsa Creativos &copy; 2018</p>
-            </div>
-        
-            <div class="footer-center">
-                
-                <div>
-                <i class="fab fa-whatsapp"></i>
-                <p>+584144152885</p>
-                </div>
-        
-                <div>
-                <i class="far fa-envelope"></i>
-                <p><a href="mailto:admin@somosimpulsa.com">admin@somosimpulsa.com</a></p>
-                </div>
-        
-            </div>
-        
-            <div class="footer-right">
-        
-                <p class="footer-company-about">
-                <span>Impulsa Creativos</span>
-                Siguenos en nuestras redes para estar al tanto
-                </p>
-        
-                <div class="footer-icons">
-                <a href="https://www.facebook.com/Impulsa-Creative-587675111575665/"  onclick="window.open(this.href); return false;"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/impulsave/?hl=es-la" onclick="window.open(this.href); return false;"><i class="fab fa-instagram"></i></a>
-                <a href="#" onclick="window.open(this.href); return false;"><i class="fab fa-twitter"></i></a>
-                <a href="#" onclick="window.open(this.href); return false;"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.youtube.com/channel/UC7ezy64_YdnfEvrGCWXEVYw" onclick="window.open(this.href); return false;"><i class="fab fa-youtube"></i></a>
-                </div>
-        
-            </div>
-        
-        </footer>
-
-        <!-- Ir Arriba -->
-        <a href="#" class="back-to-top">
-            <i class="fas fa-chevron-circle-up"></i>
-        </a>
-
-        <div id="preloader">
-            <div class="sk-circle">
-                <div class="sk-circle1 sk-child"></div>
-                <div class="sk-circle2 sk-child"></div>
-                <div class="sk-circle3 sk-child"></div>
-                <div class="sk-circle4 sk-child"></div>
-                <div class="sk-circle5 sk-child"></div>
-                <div class="sk-circle6 sk-child"></div>
-                <div class="sk-circle7 sk-child"></div>
-                <div class="sk-circle8 sk-child"></div>
-                <div class="sk-circle9 sk-child"></div>
-                <div class="sk-circle10 sk-child"></div>
-                <div class="sk-circle11 sk-child"></div>
-                <div class="sk-circle12 sk-child"></div>
-            </div>
-        </div>
+        <?php require ('Common/footer.php'); ?>
 
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="assets/js/preview.js"></script>
